@@ -53,7 +53,7 @@ a:hover::after {
 
 .main{
   position: relative;
-  background-image: url("./images/main.png");
+  background-image: url("./images/main-background.png");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -84,18 +84,52 @@ a:hover::after {
   background-color:#c8d123;
   transform: scale(1.05);
 }
-.btns{
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  align-content: center;
+.main-2{
+  position: relative;
+  background-image: url("./images/pexels-max-fischer-5872186.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 70px;
+  text-align: center;
 }
-.btn-cat{
-  background-color: #d7df23;
+.main-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* adjust darkness */
+  z-index: 1;
+}
+
+/* content above overlay */
+.main-2 > * {
+  position: relative;
+  z-index: 2;
+}
+.main-2 h6 {
+   font-family: "Titan One", sans-serif;
+   font-size:5rem;
+   color: #d7df23;
+}
+.main-2 p {
+  margin-top: 35px;
+  font-size: 1.2rem;
+}
+.main-2 button {
+  background-color:#d7df23;
+  padding: 15px 30px;
   color: black;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 25px;
   font-weight: bold;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 35px;
+  margin-top: 80px;
+  margin-left: 60px;
+}
+.main-2 button:hover{
   cursor: pointer;
+  transform: scale(1.05);
 }
