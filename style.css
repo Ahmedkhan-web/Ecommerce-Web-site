@@ -84,3 +84,18 @@ a:hover::after {
   background-color:#c8d123;
   transform: scale(1.05);
 }
+.btns{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-content: center;
+}
+.btn-cat{
+  background-color: #d7df23;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}

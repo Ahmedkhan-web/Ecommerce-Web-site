@@ -52,7 +52,7 @@ products.map(item=>{
 })
 
 category.map((item,index)=>{
-  buttons.innerHTML+=`<button onclick="filterProduct(${index})">${item}</button>`
+  buttons.innerHTML+=`<button class="btn-cat" onclick="filterProduct(${index})">${item}</button>`
 })
 
 function renderobject(arr){
@@ -79,3 +79,4 @@ buttons.addEventListener('click',event=>{
     event.target.className="active"
   }
 })
+
