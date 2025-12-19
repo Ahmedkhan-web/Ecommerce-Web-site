@@ -100,11 +100,10 @@ a:hover::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* adjust darkness */
+  background-color: rgba(0, 0, 0, 0.8); 
   z-index: 1;
 }
 
-/* content above overlay */
 .main-2 > * {
   position: relative;
   z-index: 2;
@@ -132,4 +131,264 @@ a:hover::after {
 .main-2 button:hover{
   cursor: pointer;
   transform: scale(1.05);
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding:35px 0px 15px 0px;
+}
+.btn-cat{
+  background-color:#d7df23;
+  padding: 10px 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  transition: transform 0.2s;
+}
+ .btn-cat:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  height: 320px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, background-size 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.25)
+  );
+}
+
+.card-content {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  padding: 16px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.card-content h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+.card-content .category {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.card-content .price {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #d7df23;
+}
+
+.contact-section {
+  padding: 80px 20px;
+  background-color: #111; /* dark section background */
+}
+
+.contact-section .text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  background-color: #222;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #333;
+}
+
+.contact-form button {
+  background-color: #d7df23;
+  color: black;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #c8d123;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main h2 {
+    font-size: 2.5rem;
+    padding-top: 150px;
+    padding-left: 20px;
+  }
+  .main p {
+    width: 70%;
+    padding-left: 20px;
+  }
+  .main button {
+    margin-left: 40px;
+  }
+
+  .main-2 h6 {
+    font-size: 4rem;
+  }
+  .main-2 p {
+    font-size: 1.1rem;
+  }
+  .main-2 button {
+    margin-left: 40px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  .li {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .main h2 {
+    font-size: 2rem;
+    padding-top: 120px;
+  }
+  .main p {
+    width: 90%;
+  }
+
+  .main-2 h6 {
+    font-size: 3rem;
+  }
+  .main-2 p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btns {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0 10px 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 20px;
+  }
+
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main h2 {
+    font-size: 1.5rem;
+    padding-top: 100px;
+  }
+
+  .main p {
+    width: 100%;
+  }
+
+  .main-2 h6 {
+    font-size: 2.2rem;
+  }
+
+  .main-2 p {
+    font-size: 0.95rem;
+  }
+
+  .main-2 button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-left: 20px;
+  }
+
+  .card-content h2 {
+    font-size: 1rem;
+  }
+
+  .card-content .price,
+  .card-content .category {
+    font-size: 0.85rem;
+  }
 }
